@@ -45,5 +45,6 @@ public class Costo_sin_envio extends AppCompatActivity {
     public void irClienteSenv(View view) {
         Intent intent = new Intent(Costo_sin_envio.this, Cliente_senv.class);
         startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
     }
 }

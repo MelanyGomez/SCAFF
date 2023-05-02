@@ -21,13 +21,14 @@
     <!--button7-->
     <Button
         android:id="@+id/maquinariaButton2"
-        android:layout_width="150dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
+        android:layout_marginStart="130dp"
         android:backgroundTint="@color/black1"
         android:ellipsize="end"
         android:gravity="center"
         android:maxLines="1"
-        android:layout_marginStart="130dp"
+        android:onClick="irMaquinariaMat"
         android:text="MAQUINAS"
         android:textColor="@color/white"
         android:textSize="15dp"
@@ -36,10 +37,11 @@
     <!--button8-->
     <Button
         android:id="@+id/registroButton2"
-        android:layout_width="130dp"
+        android:layout_width="150dp"
         android:layout_height="60dp"
+        android:layout_marginStart="260dp"
         android:backgroundTint="@color/black1"
-        android:layout_marginStart="280dp"
+        android:onClick="irRegistroMat"
         android:text="REGISTRO"
         android:textColor="@color/white"
         android:textSize="15dp"
@@ -115,6 +117,7 @@
         android:layout_marginEnd="20dp"
         android:text="Haz clic para calcular el costo del pedido considerando el precio del material por metros cúbicos, la cantidad y el costo del envío con precisión."
         android:textColor="@color/black" />
+
     <Button
         android:id="@+id/bt_costo_mat_mat"
         android:layout_width="wrap_content"
@@ -122,6 +125,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="670dp"
         android:backgroundTint="@color/yellow"
+        android:onClick="irRegistroMat"
         android:text="COSTO MATERIALES"
         android:textColor="@color/black"
         android:textSize="15dp" />

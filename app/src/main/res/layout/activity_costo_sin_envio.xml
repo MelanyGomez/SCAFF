@@ -100,6 +100,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="560dp"
         android:text=""
+        android:hint="Costo total: "
         android:textColor="@color/black"
         android:textSize="20dp" />
 
@@ -119,11 +120,12 @@
         android:id="@+id/datos_cliente_senv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="650dp"
         android:layout_marginStart="240dp"
-        android:textColor="@color/black"
+        android:layout_marginTop="650dp"
         android:backgroundTint="@color/yellow"
-        android:text="DATOS DEL CLIENTE" />
+        android:onClick="irClienteSenv"
+        android:text="DATOS DEL CLIENTE"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/limpiar_csenv"

@@ -17,4 +17,15 @@ public class Maquinaria_act extends AppCompatActivity {
         setContentView(R.layout.activity_maquinaria);
     }
 
+    public void irMaterialMaq(View view) {
+        Intent intent = new Intent(Maquinaria_act.this, Materiales_act.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+    }
+    public void irRegistroMaq(View view) {
+        Intent intent = new Intent(Maquinaria_act.this, Registro_materiales.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+    }
+
 }

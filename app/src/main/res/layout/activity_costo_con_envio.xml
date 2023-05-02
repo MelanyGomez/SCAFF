@@ -95,6 +95,16 @@
         android:background="@drawable/format_field"
         android:inputType="number"
         android:maxLength="12"/>
+    <TextView
+        android:id="@+id/tv_total_mat_cenv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="560dp"
+        android:text=""
+        android:hint="Costo material: "
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/bt_regresar_cenv"
@@ -112,11 +122,12 @@
         android:id="@+id/bt_envio_cenv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="650dp"
         android:layout_marginStart="240dp"
-        android:textColor="@color/black"
+        android:layout_marginTop="650dp"
         android:backgroundTint="@color/yellow"
-        android:text="DETALLES ENVIO" />
+        android:onClick="irEnvioMat"
+        android:text="DETALLES ENVIO"
+        android:textColor="@color/black" />
 
 
 </RelativeLayout>

@@ -13,6 +13,7 @@ public class Registro_materiales extends AppCompatActivity {
         setContentView(R.layout.activity_registro_materiales);
     }
     public void volver_mat(View view) {
+
         finish();
     }
 }
