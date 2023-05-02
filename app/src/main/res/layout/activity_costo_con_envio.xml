@@ -112,11 +112,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="650dp"
+        android:backgroundTint="@color/black"
         android:drawableLeft="@drawable/ic_baseline_arrow_circle_left_24"
+        android:onClick="volver"
         android:text="REGRESAR"
         android:textColor="@color/white"
-        android:textSize="15dp"
-        android:backgroundTint="@color/black" />
+        android:textSize="15dp" />
 
     <Button
         android:id="@+id/bt_envio_cenv"

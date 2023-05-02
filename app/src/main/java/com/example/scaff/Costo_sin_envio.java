@@ -47,4 +47,8 @@ public class Costo_sin_envio extends AppCompatActivity {
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
     }
+    public void volver(View view) {
+
+        finish();
+    }
 }
