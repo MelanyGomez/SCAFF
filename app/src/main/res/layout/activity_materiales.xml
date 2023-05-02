@@ -46,11 +46,13 @@
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/img_senv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:onClick="irCostoSinEnvio"
         android:src="@drawable/cos_senv" />
 
     <TextView
@@ -63,13 +65,15 @@
         android:textSize="30dp"
         android:textStyle="bold"
         android:text="COSTO SIN ENVIO" />
+
     <ImageButton
         android:id="@+id/img_cenv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/cos_cenv"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="360dp"/>
+        android:layout_marginTop="360dp"
+        android:onClick="irCostoConEnvio"
+        android:src="@drawable/cos_cenv" />
 
     <TextView
         android:id="@+id/tv_mat_scenv"
