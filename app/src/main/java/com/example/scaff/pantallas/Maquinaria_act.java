@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
+import com.example.scaff.Cliente_senv;
 import com.example.scaff.R;
+import com.example.scaff.Registro_maquinas;
 import com.example.scaff.Registro_materiales;
 
 public class Maquinaria_act extends AppCompatActivity {
@@ -29,11 +31,15 @@ ListView lv1;
     public void irRegistroMaq(View view) {
         Intent intent = new Intent(Maquinaria_act.this, Registro_materiales.class);
         startActivity(intent);
-        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-    }
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);    }
     public void volver(View view) {
 
         finish();
+    }
+    public void irAgregar_maquina(View view){
+        Intent intent = new Intent(Maquinaria_act.this, Registro_maquinas.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
     }
 
 }

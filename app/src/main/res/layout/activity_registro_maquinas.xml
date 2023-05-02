@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Costo_con_envio">
+    tools:context=".Registro_maquinas">
     <ImageButton
         android:id="@+id/img_cenv_cenv"
         android:layout_width="wrap_content"
@@ -73,7 +74,7 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:hint="Ingrese el nombre del cliente"
-        android:inputType="number"
+        android:inputType="text"
         android:maxLength="6"
         android:textSize="18dp" />
 
@@ -100,7 +101,7 @@
         android:textColor="@color/black"
         android:gravity="center"
         android:hint="Ingrese los meses a utilizar"
-        android:inputType="number"
+        android:inputType="text"
         android:maxLength="12"
         android:textSize="18dp" />
 
@@ -127,7 +128,7 @@
         android:textColor="@color/black"
         android:gravity="center"
         android:hint="Ingrese la descripcion de la maquina"
-        android:inputType="number"
+        android:inputType="text"
         android:maxLength="12"
         android:textSize="18dp" />
 
@@ -137,11 +138,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="650dp"
+        android:backgroundTint="@color/black"
         android:drawableLeft="@drawable/ic_baseline_arrow_circle_left_24"
+        android:onClick="volver"
         android:text="REGRESAR"
         android:textColor="@color/white"
-        android:textSize="15dp"
-        android:backgroundTint="@color/black" />
+        android:textSize="15dp" />
 
     <Button
         android:id="@+id/bt_agregar"
@@ -151,7 +153,6 @@
         android:layout_marginStart="240dp"
         android:textColor="@color/black"
         android:backgroundTint="@color/yellow"
-        android:text="AGREGAR MAQUINA" />
-
+        android:text="REGISTRAR" />
 
 </RelativeLayout>
