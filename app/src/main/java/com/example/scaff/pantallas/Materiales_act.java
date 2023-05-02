@@ -17,6 +17,7 @@ public class Materiales_act extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_materiales);
+
     }
     public void irRegistroMat(View view) {
         Intent intent = new Intent(Materiales_act.this, Registro_materiales.class);
