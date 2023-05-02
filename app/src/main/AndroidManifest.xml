@@ -13,6 +13,18 @@
         android:theme="@style/Theme.SCAFF"
         tools:targetApi="31">
         <activity
+            android:name=".pantallas.Registro_act"
+            android:exported="false" />
+        <activity
+            android:name=".pantallas.Maquinaria_act"
+            android:exported="false" />
+        <activity
+            android:name=".pantallas.Materiales_act"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
