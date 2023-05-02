@@ -42,6 +42,7 @@
         android:ems="10"
         android:textSize="18dp"
         android:gravity="center"
+        android:textColor="@color/black"
         android:hint="Ingrese el nombre del cliente"
         android:background="@drawable/format_field"
         android:inputType="text" />
@@ -63,6 +64,7 @@
         android:layout_marginTop="340dp"
         android:ems="10"
         android:textSize="18dp"
+        android:textColor="@color/black"
         android:gravity="center"
         android:hint="Ingrese el numero telefonico del cliente"
         android:background="@drawable/format_field"
@@ -86,6 +88,7 @@
         android:ems="10"
         android:textSize="18dp"
         android:gravity="center"
+        android:textColor="@color/black"
         android:hint="Ingrese la direccion del cliente"
         android:background="@drawable/format_field"
         android:inputType="text" />

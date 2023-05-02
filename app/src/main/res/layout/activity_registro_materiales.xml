@@ -42,10 +42,11 @@
         android:layout_marginTop="240dp"
         android:ems="10"
         android:textSize="18dp"
+        android:textColor="@color/black"
         android:gravity="center"
         android:hint="Ingrese el nombre del material"
         android:background="@drawable/format_field"
-        android:inputType="number" />
+        android:inputType="text" />
     <TextView
         android:id="@+id/tv_cos_mat_reg"
         android:layout_width="wrap_content"
@@ -64,7 +65,8 @@
         android:ems="10"
         android:textSize="18dp"
         android:gravity="center"
-        android:hint="Ingrese el nombre del material"
+        android:textColor="@color/black"
+        android:hint="Ingrese el costo del material"
         android:background="@drawable/format_field"
         android:inputType="number"
         android:maxLength="6"/>
