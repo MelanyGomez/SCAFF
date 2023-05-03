@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.scaff.pantallas.Materiales_act;
 
 public class Costo_sin_envio extends AppCompatActivity {
+    public EditText nombre_senv;
     public EditText costo_senv;
     public EditText cant_senv;
     public TextView costo_total_senv;
@@ -22,6 +23,7 @@ public class Costo_sin_envio extends AppCompatActivity {
 
         costo_senv=(EditText)findViewById(R.id.ed_cos_mat_senv);
         cant_senv=(EditText)findViewById(R.id.ed_cant_mat_senv);
+        nombre_senv=(EditText)findViewById(R.id.ed_nom_mat_senv);
         costo_total_senv=(TextView)findViewById(R.id.tv_total_senv);
 
     }
@@ -46,6 +48,11 @@ public class Costo_sin_envio extends AppCompatActivity {
         Intent intent = new Intent(Costo_sin_envio.this, Cliente_senv.class);
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+    }
+    public void limpiar(View view){
+        nombre_senv.setText("");
+        costo_senv.setText("");
+        cant_senv.setText("");
     }
     public void volver(View view) {
 

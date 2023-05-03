@@ -27,8 +27,24 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
                 + "UNIQUE (" + MaquinaEntry.ID_MAQUINA + "))");
 
         mockData(db);
+        db.execSQL("CREATE TABLE materiales(nombre_mat text, costo_mat real)");
+
 
     }
+
+    public boolean materialExiste(String nombre_mat) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] projection = { "nombre_mat" };
+        String selection = "nombre_mat = ?";
+        String[] selectionArgs = { nombre_mat };
+        Cursor cursor = db.query("materiales", projection, selection, selectionArgs, null, null, null);
+        boolean existe = (cursor.getCount() > 0);
+        cursor.close();
+        return existe;
+    }
+
+
+
     private void mockData(SQLiteDatabase db) {
     }
     public static abstract class MaquinaEntry implements BaseColumns {

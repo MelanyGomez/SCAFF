@@ -99,15 +99,17 @@
         android:hint="Costo total"
         android:textColor="@color/black"
         android:textSize="20dp" />
+
     <Button
         android:id="@+id/bt_calcular_total_cenv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="600dp"
         android:backgroundTint="@color/yellow"
-        android:textColor="@color/black"
-        android:text="CALCULAR COSTO TOTAL" />
+        android:onClick="calcular_total_cenv"
+        android:text="CALCULAR COSTO TOTAL"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/datos_cliente_cenv"

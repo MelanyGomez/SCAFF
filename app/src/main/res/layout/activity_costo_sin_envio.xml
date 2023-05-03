@@ -135,11 +135,12 @@
         android:id="@+id/limpiar_csenv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
         android:layout_marginStart="240dp"
+        android:layout_marginTop="600dp"
         android:backgroundTint="@color/yellow"
-        android:textColor="@color/black"
-        android:text="LIMPIAR CAMPOS" />
+        android:onClick="limpiar"
+        android:text="LIMPIAR CAMPOS"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/calcular_total_senv"
