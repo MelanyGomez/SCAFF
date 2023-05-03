@@ -5,16 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class Cliente_senv extends AppCompatActivity {
+public class Registro_maquinas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cliente_senv);
+        setContentView(R.layout.activity_registro_maquinas);
     }
+
     public void volver(View view) {
 
         finish();
     }
+
 
 }
