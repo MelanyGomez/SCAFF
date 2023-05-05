@@ -24,41 +24,7 @@ public class Maquina {
         this.cliente = cliente;
         this.meses = meses;
     }
+}
 
-    @SuppressLint("Range")
-    public Maquina(Cursor cursor) {
-        id_maquina = cursor.getString(cursor.getColumnIndex(ConexionSQLiteHelper.MaquinaEntry.ID_MAQUINA));
-        nombre = cursor.getString(cursor.getColumnIndex(ConexionSQLiteHelper.MaquinaEntry.NOMBRE));
-        descrip = cursor.getString(cursor.getColumnIndex(ConexionSQLiteHelper.MaquinaEntry.DESCRIP));
-        cliente = cursor.getString(cursor.getColumnIndex(ConexionSQLiteHelper.MaquinaEntry.CLIENTE));
-        meses = cursor.getString(cursor.getColumnIndex(ConexionSQLiteHelper.MaquinaEntry.CLIENTE));
 
-    }
-
-    public ContentValues toContentValues() {
-        ContentValues values = new ContentValues();
-        values.put(ConexionSQLiteHelper.MaquinaEntry.ID_MAQUINA, id_maquina);
-        values.put(ConexionSQLiteHelper.MaquinaEntry.NOMBRE, nombre);
-        values.put(ConexionSQLiteHelper.MaquinaEntry.DESCRIP, descrip);
-        values.put(ConexionSQLiteHelper.MaquinaEntry.CLIENTE, cliente);
-        values.put(ConexionSQLiteHelper.MaquinaEntry.MESES, meses);
-
-        return values;
-    }
-
-    public String getId_maquina() {
-        return id_maquina;
-    }
-    public String getNombre() {
-        return nombre;
-    }
-    public String getDescrip() {
-        return descrip;
-    }
-    public String getCliente() {
-        return cliente;
-    }
-    public String getMeses() {
-        return meses;
-    }}
 

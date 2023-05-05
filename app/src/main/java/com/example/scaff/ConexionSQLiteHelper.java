@@ -1,5 +1,6 @@
 package com.example.scaff;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,27 +12,34 @@ import androidx.annotation.Nullable;
 import com.example.scaff.entidades.Maquina;
 
 public class ConexionSQLiteHelper extends SQLiteOpenHelper {
+    private static final String DB_NAME = "db";
+    private static final String DB_TABLE = "maquinas_tabla";
+    //columnas
+    private static final String ID = "Id";
+    private static final String NAME = "Nombre";
+
+    private static final String CREATE_TABLE = "CREATE TABLE "+ DB_TABLE+ "("+
+            ID + "INTEGER PRIMARY KEY AUTOINCREMENT, "+
+            NAME + "TEXT "+")";
 
     public ConexionSQLiteHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + "maquinas" + " ("
-                + MaquinaEntry.ID_MAQUINA + " integer primary key autoincrement,"
-                + MaquinaEntry.NOMBRE + " text not null,"
-                + MaquinaEntry.DESCRIP + " text not null,"
-                + MaquinaEntry.CLIENTE + " text not null,"
-                + MaquinaEntry.MESES + "text not null,"
-                + "UNIQUE (" + MaquinaEntry.ID_MAQUINA + "))");
 
-        mockData(db);
+        db.execSQL(CREATE_TABLE);
         db.execSQL("CREATE TABLE materiales(nombre_mat text, costo_mat real)");
-
-
     }
 
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS "+DB_TABLE);
+
+        onCreate(db);
+    }
     public boolean materialExiste(String nombre_mat) {
         SQLiteDatabase db = this.getReadableDatabase();
         String[] projection = { "nombre_mat" };
@@ -43,77 +51,21 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
         return existe;
     }
 
+    public boolean insertData(String name){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(NAME, name);
 
+        long result = db.insert(DB_TABLE, null, contentValues);
 
-    private void mockData(SQLiteDatabase db) {
-    }
-    public static abstract class MaquinaEntry implements BaseColumns {
-        public static final String TABLE_NAME ="Maquina";
-
-        public static final String ID_MAQUINA = "id_maquina";
-        public static final String NOMBRE = "nombre";
-        public static final String DESCRIP = "descrip";
-        public static final String CLIENTE = "cliente";
-        public static final String MESES = "meses";
-
-    }
-    public long mockMaquina(SQLiteDatabase db, Maquina maquina) {
-        return db.insert(
-                MaquinaEntry.TABLE_NAME,
-                null,
-                maquina.toContentValues());
-    }
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-    }
-    public long saveMaquina(Maquina maquina) {
-        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
-
-        return sqLiteDatabase.insert(
-                MaquinaEntry.TABLE_NAME,
-                null,
-                maquina.toContentValues());
-
+        return result != -1;
     }
 
-    public Cursor getAllMaquinas() {
-        return getReadableDatabase()
-                .query(
-                        MaquinaEntry.TABLE_NAME,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null);
-    }
+    public Cursor viewData(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "Select * from "+DB_TABLE;
+        Cursor cursor = db.rawQuery(query, null);
 
-    public Cursor getMaquinaById(String maquinaId) {
-        Cursor c = getReadableDatabase().query(
-                MaquinaEntry.TABLE_NAME,
-                null,
-                MaquinaEntry.ID_MAQUINA + "",
-                new String[]{maquinaId},
-                null,
-                null,
-                null);
-        return c;
-    }
-
-    public int deleteMaquina(String maquinaId) {
-        return getWritableDatabase().delete(
-                MaquinaEntry.TABLE_NAME,
-                MaquinaEntry.ID_MAQUINA + "",
-                new String[]{maquinaId});
-    }
-
-    public int updateMaquina(Maquina maquina, String maquinaId) {
-        return getWritableDatabase().update(
-                MaquinaEntry.TABLE_NAME,
-                maquina.toContentValues(),
-                MaquinaEntry.ID_MAQUINA + "",
-                new String[]{maquinaId}
-        );
+        return cursor;
     }
 }
