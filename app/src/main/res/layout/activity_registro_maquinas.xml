@@ -149,10 +149,11 @@
         android:id="@+id/bt_agregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="650dp"
         android:layout_marginStart="240dp"
-        android:textColor="@color/black"
+        android:layout_marginTop="650dp"
         android:backgroundTint="@color/yellow"
-        android:text="REGISTRAR" />
+        android:onClick="irMaquinariaMat"
+        android:text="REGISTRAR"
+        android:textColor="@color/black" />
 
 </RelativeLayout>

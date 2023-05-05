@@ -55,9 +55,11 @@
     <ListView
         android:id="@+id/lv1"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="586dp"
         android:layout_below="@+id/maquinariaButton2"
-        android:layout_marginTop="3dp" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="0dp" />
 
     <Button
         android:id="@+id/bt_regresar_lv"
@@ -84,37 +86,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="18dp"
         android:backgroundTint="@color/yellow"
+        android:onClick="irRegistarMaquinas"
         android:text="AGREGAR MAQUINA"
         android:textColor="@color/black"
         android:textSize="15dp" />
 
-    <TextView
-        android:id="@+id/tv_nom_maq"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_below="@+id/bt_regresar_lv"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:text="Nombre"
-        android:textColor="@color/black"
-        android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/nombre_maquina"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@+id/tv_nom_maq"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="-7dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/format_field"
-        android:ems="10"
-        android:gravity="center"
-        android:hint=" Ingresa nombre "
-        android:inputType="text"
-        android:textColor="@color/black"
-        android:textSize="18dp" />
 
 
 </RelativeLayout>

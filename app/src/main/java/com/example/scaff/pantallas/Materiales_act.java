@@ -13,6 +13,7 @@ import com.example.scaff.Registro_materiales;
 
 public class Materiales_act extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -5,14 +5,14 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.BaseColumns;
+
 
 import androidx.annotation.Nullable;
 
-import com.example.scaff.entidades.Maquina;
+
 
 public class ConexionSQLiteHelper extends SQLiteOpenHelper {
-    private static final String DB_NAME = "db";
+
     private static final String DB_TABLE = "maquinas_tabla";
     //columnas
     private static final String ID = "Id";
@@ -61,11 +61,5 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    public Cursor viewData(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "Select * from "+DB_TABLE;
-        Cursor cursor = db.rawQuery(query, null);
 
-        return cursor;
-    }
 }
